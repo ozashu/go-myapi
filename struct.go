@@ -7,20 +7,20 @@ import (
 )
 
 type Comment struct {
-	CommentID int
-	ArticleID int
-	Message   string
-	CreatedAt time.Time
+	CommentID int       `json:"comment_id`
+	ArticleID int       `json:"article_id`
+	Message   string    `json:message`
+	CreatedAt time.Time `json:created_at`
 }
 
 type Article struct {
-	ID          int
-	Title       string
-	Contents    string
-	UserName    string
-	NiceNum     int
-	CommentList []Comment
-	CreatedAt   time.Time
+	ID          int       `json:"article_id"`
+	Title       string    `json:"titile"`
+	Contents    string    `json:"contents"`
+	UserName    string    `json:"user_name"`
+	NiceNum     int       `json:"nice_name"`
+	CommentList []Comment `json:"comment_list"`
+	CreatedAt   time.Time `json:"created_at"`
 }
 
 func main() {
@@ -41,7 +41,7 @@ func main() {
 		ID:          1,
 		Title:       "first article",
 		Contents:    "This is the test article",
-		UserName:    "saki",
+		UserName:    "ozashu",
 		NiceNum:     1,
 		CommentList: []Comment{comment1, comment2},
 		CreatedAt:   time.Now(),
